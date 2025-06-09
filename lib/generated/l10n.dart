@@ -56,22 +56,22 @@ class S {
 
   /// `Coinmerce`
   String get appBarTitle {
-    return Intl.message('Coinmerce', name: 'appBarTitle', desc: '', args: []);
+    return Intl.message(
+      'Coinmerce',
+      name: 'appBarTitle',
+      desc: 'The title shown in the app bar',
+      args: [],
+    );
   }
 
   /// `Description`
   String get description {
-    return Intl.message('Description', name: 'description', desc: '', args: []);
-  }
-
-  /// `Location`
-  String get location {
-    return Intl.message('Location', name: 'location', desc: '', args: []);
-  }
-
-  /// `Open in Maps`
-  String get openMap {
-    return Intl.message('Open in Maps', name: 'openMap', desc: '', args: []);
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: 'Label for the description section',
+      args: [],
+    );
   }
 
   /// `No results found`
@@ -79,52 +79,57 @@ class S {
     return Intl.message(
       'No results found',
       name: 'emptyResult',
-      desc: '',
+      desc: 'Message shown when no search results are found',
       args: [],
     );
   }
 
   /// `Search`
   String get search {
-    return Intl.message('Search', name: 'search', desc: '', args: []);
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: 'Label for search functionality',
+      args: [],
+    );
   }
 
   /// `An error occurred`
   String get error {
-    return Intl.message('An error occurred', name: 'error', desc: '', args: []);
+    return Intl.message(
+      'An error occurred',
+      name: 'error',
+      desc: 'Generic error message',
+      args: [],
+    );
   }
 
   /// `About`
   String get about {
-    return Intl.message('About', name: 'about', desc: '', args: []);
-  }
-
-  /// `Design & Development`
-  String get designAndDevelopment {
     return Intl.message(
-      'Design & Development',
-      name: 'designAndDevelopment',
-      desc: '',
+      'About',
+      name: 'about',
+      desc: 'Label for about section',
       args: [],
     );
   }
 
   /// `Language`
   String get language {
-    return Intl.message('Language', name: 'language', desc: '', args: []);
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: 'Label for language settings',
+      args: [],
+    );
   }
 
   /// `Dark Mode`
   String get darkMode {
-    return Intl.message('Dark Mode', name: 'darkMode', desc: '', args: []);
-  }
-
-  /// `Location Services`
-  String get locationServices {
     return Intl.message(
-      'Location Services',
-      name: 'locationServices',
-      desc: '',
+      'Dark Mode',
+      name: 'darkMode',
+      desc: 'Label for dark mode toggle',
       args: [],
     );
   }
@@ -134,7 +139,11 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();
 
   List<Locale> get supportedLocales {
-    return const <Locale>[Locale.fromSubtags(languageCode: 'en')];
+    return const <Locale>[
+      Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'cs'),
+      Locale.fromSubtags(languageCode: 'nl'),
+    ];
   }
 
   @override

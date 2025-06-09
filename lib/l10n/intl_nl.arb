@@ -1,34 +1,34 @@
 {
-    "@@locale": "en",
+    "@@locale": "nl",
     "appBarTitle": "Coinmerce",
     "@appBarTitle": {
         "description": "The title shown in the app bar"
     },
-    "description": "Description",
+    "description": "Beschrijving",
     "@description": {
         "description": "Label for the description section"
     },
-    "emptyResult": "No results found",
+    "emptyResult": "Geen resultaten gevonden",
     "@emptyResult": {
         "description": "Message shown when no search results are found"
     },
-    "search": "Search",
+    "search": "Zoeken",
     "@search": {
         "description": "Label for search functionality"
     },
-    "error": "An error occurred",
+    "error": "Er is een fout opgetreden",
     "@error": {
         "description": "Generic error message"
     },
-    "about": "About",
+    "about": "Over",
     "@about": {
         "description": "Label for about section"
     },
-    "language": "Language",
+    "language": "Taal",
     "@language": {
         "description": "Label for language settings"
     },
-    "darkMode": "Dark Mode",
+    "darkMode": "Donkere modus",
     "@darkMode": {
         "description": "Label for dark mode toggle"
     }

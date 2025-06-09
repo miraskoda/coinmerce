@@ -1,5 +1,5 @@
 extension CoinImageExtensions on String {
-  String ascoinImage() {
+  String asCoinImage() {
     return this;
   }
 }

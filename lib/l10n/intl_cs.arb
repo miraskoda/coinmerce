@@ -1,34 +1,34 @@
 {
-    "@@locale": "en",
+    "@@locale": "cs",
     "appBarTitle": "Coinmerce",
     "@appBarTitle": {
         "description": "The title shown in the app bar"
     },
-    "description": "Description",
+    "description": "Popis",
     "@description": {
         "description": "Label for the description section"
     },
-    "emptyResult": "No results found",
+    "emptyResult": "Nebyly nalezeny žádné výsledky",
     "@emptyResult": {
         "description": "Message shown when no search results are found"
     },
-    "search": "Search",
+    "search": "Hledat",
     "@search": {
         "description": "Label for search functionality"
     },
-    "error": "An error occurred",
+    "error": "Došlo k chybě",
     "@error": {
         "description": "Generic error message"
     },
-    "about": "About",
+    "about": "O aplikaci",
     "@about": {
         "description": "Label for about section"
     },
-    "language": "Language",
+    "language": "Jazyk",
     "@language": {
         "description": "Label for language settings"
     },
-    "darkMode": "Dark Mode",
+    "darkMode": "Tmavý režim",
     "@darkMode": {
         "description": "Label for dark mode toggle"
     }

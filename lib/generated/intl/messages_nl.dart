@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a nl locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,17 +18,19 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'nl';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "about": MessageLookupByLibrary.simpleMessage("About"),
+    "about": MessageLookupByLibrary.simpleMessage("Over"),
     "appBarTitle": MessageLookupByLibrary.simpleMessage("Coinmerce"),
-    "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
-    "description": MessageLookupByLibrary.simpleMessage("Description"),
-    "emptyResult": MessageLookupByLibrary.simpleMessage("No results found"),
-    "error": MessageLookupByLibrary.simpleMessage("An error occurred"),
-    "language": MessageLookupByLibrary.simpleMessage("Language"),
-    "search": MessageLookupByLibrary.simpleMessage("Search"),
+    "darkMode": MessageLookupByLibrary.simpleMessage("Donkere modus"),
+    "description": MessageLookupByLibrary.simpleMessage("Beschrijving"),
+    "emptyResult": MessageLookupByLibrary.simpleMessage(
+      "Geen resultaten gevonden",
+    ),
+    "error": MessageLookupByLibrary.simpleMessage("Er is een fout opgetreden"),
+    "language": MessageLookupByLibrary.simpleMessage("Taal"),
+    "search": MessageLookupByLibrary.simpleMessage("Zoeken"),
   };
 }

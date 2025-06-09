@@ -9,7 +9,7 @@ class ErrorScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // TODO: Implement retry logic
+        // TO-DO: Implement retry logic
       },
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

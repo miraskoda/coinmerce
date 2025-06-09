@@ -14,7 +14,7 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imageProvider = Image.network(
-      coin.image.ascoinImage(),
+      coin.image.asCoinImage(),
       fit: BoxFit.cover,
       errorBuilder: (_, __, ___) => const Icon(Icons.close_rounded, size: PrimaryConstants.kDefaultSpacing),
     );
