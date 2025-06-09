@@ -1,1 +1,13 @@
-{}
+{
+    "appBarTitle": "Coinmerce",
+    "description": "Description",
+    "location": "Location",
+    "openMap": "Open in Maps",
+    "emptyResult": "No results found",
+    "search": "Search",
+    "error": "An error occurred",
+    "about": "About",
+    "designAndDevelopment": "Design & Development",
+    "language": "Language",
+    "darkMode": "Dark Mode"
+}

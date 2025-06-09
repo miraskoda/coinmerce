@@ -53,6 +53,81 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Coinmerce`
+  String get appBarTitle {
+    return Intl.message('Coinmerce', name: 'appBarTitle', desc: '', args: []);
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message('Description', name: 'description', desc: '', args: []);
+  }
+
+  /// `Location`
+  String get location {
+    return Intl.message('Location', name: 'location', desc: '', args: []);
+  }
+
+  /// `Open in Maps`
+  String get openMap {
+    return Intl.message('Open in Maps', name: 'openMap', desc: '', args: []);
+  }
+
+  /// `No results found`
+  String get emptyResult {
+    return Intl.message(
+      'No results found',
+      name: 'emptyResult',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message('Search', name: 'search', desc: '', args: []);
+  }
+
+  /// `An error occurred`
+  String get error {
+    return Intl.message('An error occurred', name: 'error', desc: '', args: []);
+  }
+
+  /// `About`
+  String get about {
+    return Intl.message('About', name: 'about', desc: '', args: []);
+  }
+
+  /// `Design & Development`
+  String get designAndDevelopment {
+    return Intl.message(
+      'Design & Development',
+      name: 'designAndDevelopment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message('Language', name: 'language', desc: '', args: []);
+  }
+
+  /// `Dark Mode`
+  String get darkMode {
+    return Intl.message('Dark Mode', name: 'darkMode', desc: '', args: []);
+  }
+
+  /// `Location Services`
+  String get locationServices {
+    return Intl.message(
+      'Location Services',
+      name: 'locationServices',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
