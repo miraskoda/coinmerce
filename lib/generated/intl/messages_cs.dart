@@ -23,7 +23,13 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about": MessageLookupByLibrary.simpleMessage("O aplikaci"),
+    "additionalInfo": MessageLookupByLibrary.simpleMessage("Další informace"),
+    "allTimeHigh": MessageLookupByLibrary.simpleMessage("Historické maximum"),
+    "allTimeLow": MessageLookupByLibrary.simpleMessage("Historické minimum"),
     "appBarTitle": MessageLookupByLibrary.simpleMessage("Coinmerce"),
+    "circulatingSupply": MessageLookupByLibrary.simpleMessage(
+      "Obíhající zásoba",
+    ),
     "darkMode": MessageLookupByLibrary.simpleMessage("Tmavý režim"),
     "description": MessageLookupByLibrary.simpleMessage("Popis"),
     "description_text": MessageLookupByLibrary.simpleMessage(
@@ -33,7 +39,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "Nebyly nalezeny žádné výsledky",
     ),
     "error": MessageLookupByLibrary.simpleMessage("Došlo k chybě"),
+    "high24h": MessageLookupByLibrary.simpleMessage("Maximum za 24h"),
     "language": MessageLookupByLibrary.simpleMessage("Jazyk"),
+    "lastUpdated": MessageLookupByLibrary.simpleMessage("Poslední aktualizace"),
+    "low24h": MessageLookupByLibrary.simpleMessage("Minimum za 24h"),
+    "marketCap": MessageLookupByLibrary.simpleMessage("Tržní kapitalizace"),
+    "marketCapRank": MessageLookupByLibrary.simpleMessage(
+      "Pořadí tržní kapitalizace",
+    ),
+    "marketData": MessageLookupByLibrary.simpleMessage("Tržní data"),
+    "priceStatistics": MessageLookupByLibrary.simpleMessage("Statistiky cen"),
+    "roi": MessageLookupByLibrary.simpleMessage("Návratnost investice"),
     "search": MessageLookupByLibrary.simpleMessage("Hledat"),
+    "volume24h": MessageLookupByLibrary.simpleMessage("Objem za 24h"),
   };
 }

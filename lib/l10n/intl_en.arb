@@ -35,5 +35,57 @@
     "description_text": "Coinmerce is your trusted companion in the world of cryptocurrency. We provide real-time market data, price tracking, and portfolio management tools to help you make informed investment decisions. Our user-friendly interface makes it easy to monitor your favorite cryptocurrencies and stay updated with market trends. Whether you're a seasoned trader or just starting your crypto journey, Coinmerce is here to support your financial goals.",
     "@description_text": {
         "description": "The main description text shown in the about section"
+    },
+    "marketData": "Market Data",
+    "@marketData": {
+        "description": "Title for the market data section"
+    },
+    "priceStatistics": "Price Statistics",
+    "@priceStatistics": {
+        "description": "Title for the price statistics section"
+    },
+    "additionalInfo": "Additional Info",
+    "@additionalInfo": {
+        "description": "Title for the additional info section"
+    },
+    "marketCap": "Market Cap",
+    "@marketCap": {
+        "description": "Label for market capitalization"
+    },
+    "marketCapRank": "Market Cap Rank",
+    "@marketCapRank": {
+        "description": "Label for market cap rank"
+    },
+    "volume24h": "24h Volume",
+    "@volume24h": {
+        "description": "Label for 24-hour volume"
+    },
+    "circulatingSupply": "Circulating Supply",
+    "@circulatingSupply": {
+        "description": "Label for circulating supply"
+    },
+    "high24h": "24h High",
+    "@high24h": {
+        "description": "Label for 24-hour high price"
+    },
+    "low24h": "24h Low",
+    "@low24h": {
+        "description": "Label for 24-hour low price"
+    },
+    "allTimeHigh": "All Time High",
+    "@allTimeHigh": {
+        "description": "Label for all-time high price"
+    },
+    "allTimeLow": "All Time Low",
+    "@allTimeLow": {
+        "description": "Label for all-time low price"
+    },
+    "lastUpdated": "Last Updated",
+    "@lastUpdated": {
+        "description": "Label for last update timestamp"
+    },
+    "roi": "ROI",
+    "@roi": {
+        "description": "Label for return on investment"
     }
 }

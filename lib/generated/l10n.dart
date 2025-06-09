@@ -143,6 +143,136 @@ class S {
       args: [],
     );
   }
+
+  /// `Market Data`
+  String get marketData {
+    return Intl.message(
+      'Market Data',
+      name: 'marketData',
+      desc: 'Title for the market data section',
+      args: [],
+    );
+  }
+
+  /// `Price Statistics`
+  String get priceStatistics {
+    return Intl.message(
+      'Price Statistics',
+      name: 'priceStatistics',
+      desc: 'Title for the price statistics section',
+      args: [],
+    );
+  }
+
+  /// `Additional Info`
+  String get additionalInfo {
+    return Intl.message(
+      'Additional Info',
+      name: 'additionalInfo',
+      desc: 'Title for the additional info section',
+      args: [],
+    );
+  }
+
+  /// `Market Cap`
+  String get marketCap {
+    return Intl.message(
+      'Market Cap',
+      name: 'marketCap',
+      desc: 'Label for market capitalization',
+      args: [],
+    );
+  }
+
+  /// `Market Cap Rank`
+  String get marketCapRank {
+    return Intl.message(
+      'Market Cap Rank',
+      name: 'marketCapRank',
+      desc: 'Label for market cap rank',
+      args: [],
+    );
+  }
+
+  /// `24h Volume`
+  String get volume24h {
+    return Intl.message(
+      '24h Volume',
+      name: 'volume24h',
+      desc: 'Label for 24-hour volume',
+      args: [],
+    );
+  }
+
+  /// `Circulating Supply`
+  String get circulatingSupply {
+    return Intl.message(
+      'Circulating Supply',
+      name: 'circulatingSupply',
+      desc: 'Label for circulating supply',
+      args: [],
+    );
+  }
+
+  /// `24h High`
+  String get high24h {
+    return Intl.message(
+      '24h High',
+      name: 'high24h',
+      desc: 'Label for 24-hour high price',
+      args: [],
+    );
+  }
+
+  /// `24h Low`
+  String get low24h {
+    return Intl.message(
+      '24h Low',
+      name: 'low24h',
+      desc: 'Label for 24-hour low price',
+      args: [],
+    );
+  }
+
+  /// `All Time High`
+  String get allTimeHigh {
+    return Intl.message(
+      'All Time High',
+      name: 'allTimeHigh',
+      desc: 'Label for all-time high price',
+      args: [],
+    );
+  }
+
+  /// `All Time Low`
+  String get allTimeLow {
+    return Intl.message(
+      'All Time Low',
+      name: 'allTimeLow',
+      desc: 'Label for all-time low price',
+      args: [],
+    );
+  }
+
+  /// `Last Updated`
+  String get lastUpdated {
+    return Intl.message(
+      'Last Updated',
+      name: 'lastUpdated',
+      desc: 'Label for last update timestamp',
+      args: [],
+    );
+  }
+
+  /// `ROI`
+  String get roi {
+    return Intl.message(
+      'ROI',
+      name: 'roi',
+      desc: 'Label for return on investment',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

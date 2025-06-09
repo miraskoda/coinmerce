@@ -1,11 +1,11 @@
 import 'package:coinmerce/api/model/coin.dart';
-import 'package:coinmerce/core/extensions/app_extensions.dart';
+import 'package:coinmerce/core/extensions/date_extension.dart';
 import 'package:coinmerce/core/extensions/dollar_extension.dart';
+import 'package:coinmerce/generated/l10n.dart';
 import 'package:coinmerce/ui/others/primary_constants.dart';
 import 'package:coinmerce/ui/others/primary_padding.dart';
 import 'package:coinmerce/ui/others/primary_spacing.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({required this.coin, super.key});
@@ -23,7 +23,7 @@ class DetailScreen extends StatelessWidget {
               background: Hero(
                 tag: coin.id,
                 child: Image.network(
-                  coin.image.asCoinImage(),
+                  coin.image,
                   fit: BoxFit.contain,
                   errorBuilder: (_, __, ___) => const Icon(Icons.image_not_supported, size: 100),
                 ),
@@ -63,27 +63,28 @@ class DetailScreen extends StatelessWidget {
                     ],
                   ),
                   const PrimarySpacing.gapLg(),
-                  _buildInfoSection(context, 'Market Data', [
-                    _buildInfoRow(context, 'Market Cap', coin.marketCap.toCompactDollar()),
-                    _buildInfoRow(context, 'Market Cap Rank', '#${coin.marketCapRank}'),
-                    _buildInfoRow(context, '24h Volume', coin.totalVolume.toCompactDollar()),
+                  _buildInfoSection(context, S.of(context).marketData, [
+                    _buildInfoRow(context, S.of(context).marketCap, coin.marketCap.toCompactDollar()),
+                    _buildInfoRow(context, S.of(context).marketCapRank, '#${coin.marketCapRank}'),
+                    _buildInfoRow(context, S.of(context).volume24h, coin.totalVolume.toCompactDollar()),
                     _buildInfoRow(
                       context,
-                      'Circulating Supply',
+                      S.of(context).circulatingSupply,
                       '${coin.circulatingSupply.toStringAsFixed(0)} ${coin.symbol.toUpperCase()}',
                     ),
                   ]),
                   const PrimarySpacing.gapLg(),
-                  _buildInfoSection(context, 'Price Statistics', [
-                    _buildInfoRow(context, '24h High', coin.high24h.toDollar()),
-                    _buildInfoRow(context, '24h Low', coin.low24h.toDollar()),
-                    _buildInfoRow(context, 'All Time High', coin.ath.toDollar()),
-                    _buildInfoRow(context, 'All Time Low', coin.atl.toDollar()),
+                  _buildInfoSection(context, S.of(context).priceStatistics, [
+                    _buildInfoRow(context, S.of(context).high24h, coin.high24h.toDollar()),
+                    _buildInfoRow(context, S.of(context).low24h, coin.low24h.toDollar()),
+                    _buildInfoRow(context, S.of(context).allTimeHigh, coin.ath.toDollar()),
+                    _buildInfoRow(context, S.of(context).allTimeLow, coin.atl.toDollar()),
                   ]),
                   const PrimarySpacing.gapLg(),
-                  _buildInfoSection(context, 'Additional Info', [
-                    _buildInfoRow(context, 'Last Updated', DateFormat('MMM dd, yyyy HH:mm').format(coin.lastUpdated)),
-                    if (coin.roi != null) _buildInfoRow(context, 'ROI', '${coin.roi!.percentage.toStringAsFixed(2)}%'),
+                  _buildInfoSection(context, S.of(context).additionalInfo, [
+                    _buildInfoRow(context, S.of(context).lastUpdated, coin.lastUpdated.toFormattedDateTime()),
+                    if (coin.roi != null)
+                      _buildInfoRow(context, S.of(context).roi, '${coin.roi!.percentage.toStringAsFixed(2)}%'),
                   ]),
                 ],
               ),

@@ -1,5 +1,4 @@
 import 'package:coinmerce/api/model/coin.dart';
-import 'package:coinmerce/core/extensions/app_extensions.dart';
 import 'package:coinmerce/core/extensions/dollar_extension.dart';
 import 'package:coinmerce/core/router/app_router.dart';
 import 'package:coinmerce/ui/others/primary_constants.dart';
@@ -29,7 +28,7 @@ class CoinItem extends StatelessWidget {
                     child: Hero(
                       tag: coin.id,
                       child: Image.network(
-                        coin.image.asCoinImage(),
+                        coin.image,
                         width: PrimaryConstants.kHugeImageSize,
                         height: PrimaryConstants.kHugeImageSize,
                         fit: BoxFit.cover,

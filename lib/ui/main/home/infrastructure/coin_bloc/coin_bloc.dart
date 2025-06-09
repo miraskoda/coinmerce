@@ -13,9 +13,11 @@ class CoinBloc extends Bloc<CoinEvent, CoinState> {
   CoinBloc({required this.apiRepository}) : super(CoinState.init()) {
     on<_Init>(_init);
     on<_Refresh>(_refresh);
+    on<_Search>(_search);
   }
 
   final ApiRepository apiRepository;
+  List<Coin> _allCoins = [];
 
   Future<void> _init(_Init e, Emitter<CoinState> emit) async {
     emit(state.copyWith(isLoading: true));
@@ -26,7 +28,8 @@ class CoinBloc extends Bloc<CoinEvent, CoinState> {
         emit(state.copyWith(isLoading: false, isError: true));
       },
       (r) {
-        emit(state.copyWith(isLoading: false, coinsData: r.data!, isError: false));
+        _allCoins = r.data!;
+        emit(state.copyWith(isLoading: false, coinsData: _allCoins, isError: false));
       },
     );
   }
@@ -38,8 +41,26 @@ class CoinBloc extends Bloc<CoinEvent, CoinState> {
         emit(state.copyWith(isError: true));
       },
       (r) {
-        emit(state.copyWith(coinsData: r.data!, isError: false));
+        _allCoins = r.data!;
+        emit(state.copyWith(coinsData: _allCoins, isError: false));
       },
     );
+  }
+
+  void _search(_Search e, Emitter<CoinState> emit) {
+    if (e.phrase.isEmpty) {
+      emit(state.copyWith(coinsData: _allCoins));
+      return;
+    }
+
+    final searchPhrase = e.phrase.toLowerCase();
+    final filteredCoins =
+        _allCoins.where((coin) {
+          return coin.name.toLowerCase().contains(searchPhrase) ||
+              coin.symbol.toLowerCase().contains(searchPhrase) ||
+              coin.id.toLowerCase().contains(searchPhrase);
+        }).toList();
+
+    emit(state.copyWith(coinsData: filteredCoins));
   }
 }

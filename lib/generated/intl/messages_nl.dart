@@ -23,7 +23,13 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about": MessageLookupByLibrary.simpleMessage("Over"),
+    "additionalInfo": MessageLookupByLibrary.simpleMessage("Extra informatie"),
+    "allTimeHigh": MessageLookupByLibrary.simpleMessage("All-time hoogste"),
+    "allTimeLow": MessageLookupByLibrary.simpleMessage("All-time laagste"),
     "appBarTitle": MessageLookupByLibrary.simpleMessage("Coinmerce"),
+    "circulatingSupply": MessageLookupByLibrary.simpleMessage(
+      "Circulerend aanbod",
+    ),
     "darkMode": MessageLookupByLibrary.simpleMessage("Donkere modus"),
     "description": MessageLookupByLibrary.simpleMessage("Beschrijving"),
     "description_text": MessageLookupByLibrary.simpleMessage(
@@ -33,7 +39,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "Geen resultaten gevonden",
     ),
     "error": MessageLookupByLibrary.simpleMessage("Er is een fout opgetreden"),
+    "high24h": MessageLookupByLibrary.simpleMessage("24u Hoogste"),
     "language": MessageLookupByLibrary.simpleMessage("Taal"),
+    "lastUpdated": MessageLookupByLibrary.simpleMessage("Laatst bijgewerkt"),
+    "low24h": MessageLookupByLibrary.simpleMessage("24u Laagste"),
+    "marketCap": MessageLookupByLibrary.simpleMessage("Marktkapitalisatie"),
+    "marketCapRank": MessageLookupByLibrary.simpleMessage(
+      "Marktkapitalisatie rang",
+    ),
+    "marketData": MessageLookupByLibrary.simpleMessage("Marktgegevens"),
+    "priceStatistics": MessageLookupByLibrary.simpleMessage(
+      "Prijsstatistieken",
+    ),
+    "roi": MessageLookupByLibrary.simpleMessage("ROI"),
     "search": MessageLookupByLibrary.simpleMessage("Zoeken"),
+    "volume24h": MessageLookupByLibrary.simpleMessage("24u Volume"),
   };
 }

@@ -35,5 +35,57 @@
     "description_text": "Coinmerce je váš důvěryhodný společník ve světě kryptoměn. Poskytujeme data o trhu v reálném čase, sledování cen a nástroje pro správu portfolia, které vám pomohou činit informovaná investiční rozhodnutí. Naše uživatelsky přívětivé rozhraní usnadňuje sledování vašich oblíbených kryptoměn a udržování přehledu o tržních trendech. Ať už jste zkušený obchodník nebo teprve začínáte s kryptoměnami, Coinmerce je tu pro podporu vašich finančních cílů.",
     "@description_text": {
         "description": "The main description text shown in the about section"
+    },
+    "marketData": "Tržní data",
+    "@marketData": {
+        "description": "Title for the market data section"
+    },
+    "priceStatistics": "Statistiky cen",
+    "@priceStatistics": {
+        "description": "Title for the price statistics section"
+    },
+    "additionalInfo": "Další informace",
+    "@additionalInfo": {
+        "description": "Title for the additional info section"
+    },
+    "marketCap": "Tržní kapitalizace",
+    "@marketCap": {
+        "description": "Label for market capitalization"
+    },
+    "marketCapRank": "Pořadí tržní kapitalizace",
+    "@marketCapRank": {
+        "description": "Label for market cap rank"
+    },
+    "volume24h": "Objem za 24h",
+    "@volume24h": {
+        "description": "Label for 24-hour volume"
+    },
+    "circulatingSupply": "Obíhající zásoba",
+    "@circulatingSupply": {
+        "description": "Label for circulating supply"
+    },
+    "high24h": "Maximum za 24h",
+    "@high24h": {
+        "description": "Label for 24-hour high price"
+    },
+    "low24h": "Minimum za 24h",
+    "@low24h": {
+        "description": "Label for 24-hour low price"
+    },
+    "allTimeHigh": "Historické maximum",
+    "@allTimeHigh": {
+        "description": "Label for all-time high price"
+    },
+    "allTimeLow": "Historické minimum",
+    "@allTimeLow": {
+        "description": "Label for all-time low price"
+    },
+    "lastUpdated": "Poslední aktualizace",
+    "@lastUpdated": {
+        "description": "Label for last update timestamp"
+    },
+    "roi": "Návratnost investice",
+    "@roi": {
+        "description": "Label for return on investment"
     }
 }

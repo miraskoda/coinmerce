@@ -23,7 +23,13 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about": MessageLookupByLibrary.simpleMessage("About"),
+    "additionalInfo": MessageLookupByLibrary.simpleMessage("Additional Info"),
+    "allTimeHigh": MessageLookupByLibrary.simpleMessage("All Time High"),
+    "allTimeLow": MessageLookupByLibrary.simpleMessage("All Time Low"),
     "appBarTitle": MessageLookupByLibrary.simpleMessage("Coinmerce"),
+    "circulatingSupply": MessageLookupByLibrary.simpleMessage(
+      "Circulating Supply",
+    ),
     "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
     "description": MessageLookupByLibrary.simpleMessage("Description"),
     "description_text": MessageLookupByLibrary.simpleMessage(
@@ -31,7 +37,16 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "emptyResult": MessageLookupByLibrary.simpleMessage("No results found"),
     "error": MessageLookupByLibrary.simpleMessage("An error occurred"),
+    "high24h": MessageLookupByLibrary.simpleMessage("24h High"),
     "language": MessageLookupByLibrary.simpleMessage("Language"),
+    "lastUpdated": MessageLookupByLibrary.simpleMessage("Last Updated"),
+    "low24h": MessageLookupByLibrary.simpleMessage("24h Low"),
+    "marketCap": MessageLookupByLibrary.simpleMessage("Market Cap"),
+    "marketCapRank": MessageLookupByLibrary.simpleMessage("Market Cap Rank"),
+    "marketData": MessageLookupByLibrary.simpleMessage("Market Data"),
+    "priceStatistics": MessageLookupByLibrary.simpleMessage("Price Statistics"),
+    "roi": MessageLookupByLibrary.simpleMessage("ROI"),
     "search": MessageLookupByLibrary.simpleMessage("Search"),
+    "volume24h": MessageLookupByLibrary.simpleMessage("24h Volume"),
   };
 }

@@ -35,5 +35,57 @@
     "description_text": "Coinmerce is uw vertrouwde metgezel in de wereld van cryptocurrency. Wij bieden real-time marktdata, prijsvolging en portfoliobeheer tools om u te helpen weloverwogen investeringsbeslissingen te nemen. Onze gebruiksvriendelijke interface maakt het gemakkelijk om uw favoriete cryptocurrencies te volgen en op de hoogte te blijven van markttrends. Of u nu een ervaren handelaar bent of net begint met uw crypto-reis, Coinmerce staat klaar om uw financiële doelen te ondersteunen.",
     "@description_text": {
         "description": "The main description text shown in the about section"
+    },
+    "marketData": "Marktgegevens",
+    "@marketData": {
+        "description": "Title for the market data section"
+    },
+    "priceStatistics": "Prijsstatistieken",
+    "@priceStatistics": {
+        "description": "Title for the price statistics section"
+    },
+    "additionalInfo": "Extra informatie",
+    "@additionalInfo": {
+        "description": "Title for the additional info section"
+    },
+    "marketCap": "Marktkapitalisatie",
+    "@marketCap": {
+        "description": "Label for market capitalization"
+    },
+    "marketCapRank": "Marktkapitalisatie rang",
+    "@marketCapRank": {
+        "description": "Label for market cap rank"
+    },
+    "volume24h": "24u Volume",
+    "@volume24h": {
+        "description": "Label for 24-hour volume"
+    },
+    "circulatingSupply": "Circulerend aanbod",
+    "@circulatingSupply": {
+        "description": "Label for circulating supply"
+    },
+    "high24h": "24u Hoogste",
+    "@high24h": {
+        "description": "Label for 24-hour high price"
+    },
+    "low24h": "24u Laagste",
+    "@low24h": {
+        "description": "Label for 24-hour low price"
+    },
+    "allTimeHigh": "All-time hoogste",
+    "@allTimeHigh": {
+        "description": "Label for all-time high price"
+    },
+    "allTimeLow": "All-time laagste",
+    "@allTimeLow": {
+        "description": "Label for all-time low price"
+    },
+    "lastUpdated": "Laatst bijgewerkt",
+    "@lastUpdated": {
+        "description": "Label for last update timestamp"
+    },
+    "roi": "ROI",
+    "@roi": {
+        "description": "Label for return on investment"
     }
 }

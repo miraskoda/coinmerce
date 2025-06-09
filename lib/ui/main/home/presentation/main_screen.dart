@@ -60,29 +60,22 @@ class _CoinState extends State<MainScreen> {
                               color: Theme.of(context).colorScheme.surface,
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: PrimaryConstants.kDefaultSpacing),
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: SizedBox(
-                                        height: PrimaryConstants.kLargeSpacing,
-                                        child: TextFormField(
-                                          style: Theme.of(context).textTheme.bodyLarge,
-                                          onChanged:
-                                              (String str) =>
-                                                  Injector.instance<CoinBloc>().add(CoinEvent.search(phrase: str)),
-                                          decoration: InputDecoration(
-                                            suffixIconConstraints: const BoxConstraints(
-                                              maxHeight: PrimaryConstants.kDefaultSpacing,
-                                            ),
-                                            hintText: S.of(context).search,
-                                            contentPadding: const EdgeInsets.all(PrimaryConstants.kContentPadding),
-                                          ),
-                                          controller: _controller,
-                                          focusNode: _focusNode,
-                                        ),
+                                child: SizedBox(
+                                  height: PrimaryConstants.kLargeSpacing,
+                                  child: TextFormField(
+                                    style: Theme.of(context).textTheme.bodyLarge,
+                                    onChanged:
+                                        (String str) => context.read<CoinBloc>().add(CoinEvent.search(phrase: str)),
+                                    decoration: InputDecoration(
+                                      suffixIconConstraints: const BoxConstraints(
+                                        maxHeight: PrimaryConstants.kDefaultSpacing,
                                       ),
+                                      hintText: S.of(context).search,
+                                      contentPadding: const EdgeInsets.all(PrimaryConstants.kContentPadding),
                                     ),
-                                  ],
+                                    controller: _controller,
+                                    focusNode: _focusNode,
+                                  ),
                                 ),
                               ),
                             ),
@@ -92,23 +85,26 @@ class _CoinState extends State<MainScreen> {
                   },
                   body: Builder(
                     builder: (context) {
-                      if (state.isLoading) return const Center(child: CircularProgressIndicator());
-                      if (state.isError) {
-                        return ErrorScreen('${S.of(context).error} \n\n Tap here to reload again!');
-                      }
-                      if (state.coinsData.isEmpty) return const EmptyScreen();
-                      return RefreshIndicator(
-                        onRefresh: () async {
-                          Injector.instance<CoinBloc>().add(const CoinEvent.refresh());
-                        },
-                        child: ListView.builder(
-                          itemCount: state.coinsData.length,
-                          itemBuilder: (_, index) {
-                            final coin = state.coinsData[index];
-                            return CoinItem(coin);
-                          },
+                      return switch (state) {
+                        CoinState(isLoading: true) => const Center(child: CircularProgressIndicator()),
+                        CoinState(isError: true) => ErrorScreen(
+                          '${S.of(context).error} \n\n Tap here to reload again!',
                         ),
-                      );
+                        CoinState(coinsData: []) => const EmptyScreen(),
+                        _ => RefreshIndicator(
+                          onRefresh: () async {
+                            _controller.text = '';
+                            context.read<CoinBloc>().add(const CoinEvent.refresh());
+                          },
+                          child: ListView.builder(
+                            itemCount: state.coinsData.length,
+                            itemBuilder: (_, index) {
+                              final coin = state.coinsData[index];
+                              return CoinItem(coin);
+                            },
+                          ),
+                        ),
+                      };
                     },
                   ),
                 ),
