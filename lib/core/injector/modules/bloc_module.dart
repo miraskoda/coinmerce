@@ -1,6 +1,6 @@
 import 'package:coinmerce/core/app_bloc/app_bloc.dart';
 import 'package:coinmerce/core/injector/injector.dart';
-import 'package:coinmerce/ui/main/home/infrastructure/coin_bloc/coin_bloc.dart';
+import 'package:coinmerce/presentation/main/home/infrastructure/coin_bloc/coin_bloc.dart';
 
 class BlocModule {
   BlocModule._();

@@ -20,6 +20,8 @@ A Simple Flutter application that displays the top 10 cryptocurrencies by market
 - Responsive design for all platforms
 - Multi-language support (English, Czech, Dutch)
 - Dark mode toggle
+- Clean Architecture implementation
+- Comprehensive widget testing
 
 ## Tech Stack
 
@@ -75,3 +77,19 @@ https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_
    flutter run
    ```
 
+## Architecture
+
+This project follows Clean Architecture principles with the following layers:
+
+- **Domain Layer**: Contains business logic, entities, and use cases
+- **Data Layer**: Handles data operations and API communication
+- **Presentation Layer**: Manages UI and state management using BLoC pattern
+
+## Testing
+
+The project includes comprehensive widget tests to ensure UI components work as expected. Tests are located in the `test` directory and follow Flutter's testing best practices.
+
+To run the tests:
+```bash
+flutter test
+```

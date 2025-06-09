@@ -1,6 +1,7 @@
-import 'package:coinmerce/api/client/api_client.dart';
-import 'package:coinmerce/api/repository/api_repository.dart';
 import 'package:coinmerce/core/injector/injector.dart';
+import 'package:coinmerce/data/repositories/coin_repository_impl.dart';
+import 'package:coinmerce/domain/client/api_client.dart';
+import 'package:coinmerce/domain/repository/api_repository.dart';
 
 class RepositoryModule {
   RepositoryModule._();
