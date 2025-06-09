@@ -15,6 +15,7 @@ A Simple Flutter application that displays the top 10 cryptocurrencies by market
   - Circulating supply
   - Price statistics (24h high/low, all-time high/low)
 - Pull-to-refresh functionality
+- `fl_chart` package to display 7-day price history for each cryptocurrency.
 - Real-time search with instant filtering
 - Clean and modular code structure
 - Responsive design for all platforms

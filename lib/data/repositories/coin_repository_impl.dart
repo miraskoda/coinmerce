@@ -13,7 +13,7 @@ class ApiRepositoryImpl implements ApiRepository {
   @override
   Future<Either<DataFailed<String>, DataSuccess<List<Coin>>>> fetchCoins() async {
     try {
-      final response = await _apiClient.getMarkets();
+      final response = await _apiClient.getMarkets('usd', 'market_cap_desc', 10, 1, true);
       return Right(DataSuccess(response));
     } on DioException catch (e) {
       if (kDebugMode) {

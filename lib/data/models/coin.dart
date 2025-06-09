@@ -1,5 +1,6 @@
 import 'package:coinmerce/data/models/roi.dart';
-import 'package:json_annotation/json_annotation.dart';
+import 'package:coinmerce/data/models/sparkline_in_7d.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'coin.g.dart';
 
@@ -32,6 +33,7 @@ class Coin {
     required this.atlDate,
     required this.roi,
     required this.lastUpdated,
+    required this.sparklineIn7d,
   });
 
   factory Coin.fromJson(Map<String, dynamic> json) => _$CoinFromJson(json);
@@ -81,5 +83,7 @@ class Coin {
   final Roi? roi;
   @JsonKey(name: 'last_updated')
   final DateTime lastUpdated;
+  @JsonKey(name: 'sparkline_in_7d')
+  final SparklineIn7d? sparklineIn7d;
   Map<String, dynamic> toJson() => _$CoinToJson(this);
 }

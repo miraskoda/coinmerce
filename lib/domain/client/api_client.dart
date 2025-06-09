@@ -8,6 +8,12 @@ part 'api_client.g.dart';
 abstract class ApiClient {
   factory ApiClient(Dio dio) = _ApiClient;
 
-  @GET('/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false')
-  Future<List<Coin>> getMarkets();
+  @GET('/markets')
+  Future<List<Coin>> getMarkets(
+    @Query('vs_currency') String currency,
+    @Query('order') String order,
+    @Query('per_page') int perPage,
+    @Query('page') int page,
+    @Query('sparkline') bool sparkline,
+  );
 }

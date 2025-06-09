@@ -38,6 +38,12 @@ Coin _$CoinFromJson(Map<String, dynamic> json) => Coin(
           ? null
           : Roi.fromJson(json['roi'] as Map<String, dynamic>),
   lastUpdated: DateTime.parse(json['last_updated'] as String),
+  sparklineIn7d:
+      json['sparkline_in_7d'] == null
+          ? null
+          : SparklineIn7d.fromJson(
+            json['sparkline_in_7d'] as Map<String, dynamic>,
+          ),
 );
 
 Map<String, dynamic> _$CoinToJson(Coin instance) => <String, dynamic>{
@@ -67,4 +73,5 @@ Map<String, dynamic> _$CoinToJson(Coin instance) => <String, dynamic>{
   'atl_date': instance.atlDate.toIso8601String(),
   'roi': instance.roi,
   'last_updated': instance.lastUpdated.toIso8601String(),
+  'sparkline_in_7d': instance.sparklineIn7d,
 };

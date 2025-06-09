@@ -2,6 +2,7 @@ import 'package:coinmerce/core/extensions/date_extension.dart';
 import 'package:coinmerce/core/extensions/dollar_extension.dart';
 import 'package:coinmerce/data/models/coin.dart';
 import 'package:coinmerce/generated/l10n.dart';
+import 'package:coinmerce/presentation/main/home/presentation/price_chart.dart';
 import 'package:coinmerce/presentation/others/primary_constants.dart';
 import 'package:coinmerce/presentation/others/primary_padding.dart';
 import 'package:coinmerce/presentation/others/primary_spacing.dart';
@@ -35,6 +36,14 @@ class DetailScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  if (coin.sparklineIn7d != null)
+                    Builder(
+                      builder: (context) {
+                        final isPositive = coin.priceChangePercentage24h >= 0;
+                        final color = isPositive ? Colors.green : Colors.red;
+                        return PriceChart(prices: coin.sparklineIn7d!.price, color: color);
+                      },
+                    ),
                   const PrimarySpacing.gapMd(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

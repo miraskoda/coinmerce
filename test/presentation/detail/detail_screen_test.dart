@@ -37,6 +37,7 @@ void main() {
       atlDate: DateTime(2013, 7, 6),
       roi: Roi(times: 1.5, currency: 'btc', percentage: 50),
       lastUpdated: DateTime(2024),
+      sparklineIn7d: null,
     );
   });
 
@@ -132,6 +133,7 @@ void main() {
       atlDate: DateTime(2013, 7, 6),
       roi: Roi(times: 1.5, currency: 'btc', percentage: 50),
       lastUpdated: DateTime(2024),
+      sparklineIn7d: null,
     );
 
     await tester.pumpWidget(

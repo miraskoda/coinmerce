@@ -18,16 +18,28 @@ class _ApiClient implements ApiClient {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<List<Coin>> getMarkets() async {
+  Future<List<Coin>> getMarkets(
+    String currency,
+    String order,
+    int perPage,
+    int page,
+    bool sparkline,
+  ) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'vs_currency': currency,
+      r'order': order,
+      r'per_page': perPage,
+      r'page': page,
+      r'sparkline': sparkline,
+    };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<List<Coin>>(
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false',
+            '/markets',
             queryParameters: queryParameters,
             data: _data,
           )
