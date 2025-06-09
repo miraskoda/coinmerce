@@ -31,5 +31,9 @@
     "darkMode": "Donkere modus",
     "@darkMode": {
         "description": "Label for dark mode toggle"
+    },
+    "description_text": "Coinmerce is uw vertrouwde metgezel in de wereld van cryptocurrency. Wij bieden real-time marktdata, prijsvolging en portfoliobeheer tools om u te helpen weloverwogen investeringsbeslissingen te nemen. Onze gebruiksvriendelijke interface maakt het gemakkelijk om uw favoriete cryptocurrencies te volgen en op de hoogte te blijven van markttrends. Of u nu een ervaren handelaar bent of net begint met uw crypto-reis, Coinmerce staat klaar om uw financiële doelen te ondersteunen.",
+    "@description_text": {
+        "description": "The main description text shown in the about section"
     }
 }

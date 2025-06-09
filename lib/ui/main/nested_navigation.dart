@@ -23,13 +23,15 @@ class NestedNavigation extends StatelessWidget {
     return Scaffold(
       body: navigationShell,
       bottomNavigationBar: NavigationBar(
+        height: 60,
         selectedIndex: navigationShell.currentIndex,
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
         destinations:
             destinations.map((destination) {
               final index = destinations.indexOf(destination);
               return NavigationDestination(
                 label: destination.label,
-                icon: Opacity(opacity: navigationShell.currentIndex == index ? 1 : 0.2),
+                icon: Opacity(opacity: navigationShell.currentIndex == index ? 1 : 0.2, child: destination.icon),
               );
             }).toList(),
         onDestinationSelected: (i) => navigationShell.goBranch(i, initialLocation: i == navigationShell.currentIndex),

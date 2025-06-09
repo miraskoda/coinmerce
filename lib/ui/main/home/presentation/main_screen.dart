@@ -40,8 +40,8 @@ class _CoinState extends State<MainScreen> {
       onTap: () {
         _focusNode.unfocus();
       },
-      child: MultiBlocProvider(
-        providers: [BlocProvider(create: (_) => Injector.instance<CoinBloc>()..add(const CoinEvent.init()))],
+      child: BlocProvider(
+        create: (_) => Injector.instance<CoinBloc>()..add(const CoinEvent.init()),
         child: Scaffold(
           appBar: const PrimaryAppbar(),
           body: BlocBuilder<CoinBloc, CoinState>(
@@ -56,39 +56,29 @@ class _CoinState extends State<MainScreen> {
                           elevation: 1,
                           flexibleSpace: FlexibleSpaceBar(
                             collapseMode: CollapseMode.none,
-                            background: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: PrimaryConstants.kDefaultSpacing,
-                                vertical: PrimaryConstants.kSmallSpacing,
-                              ),
-                              child: SizedBox(
-                                height: PrimaryConstants.kLargeSpacing,
+                            background: ColoredBox(
+                              color: Theme.of(context).colorScheme.surface,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: PrimaryConstants.kDefaultSpacing),
                                 child: Row(
                                   children: [
                                     Expanded(
-                                      child: DecoratedBox(
-                                        decoration: BoxDecoration(
-                                          color: Theme.of(context).listTileTheme.tileColor,
-                                          borderRadius: BorderRadius.circular(PrimaryConstants.kNormalBorderRadius),
-                                        ),
-                                        child: SizedBox(
-                                          height: PrimaryConstants.kLargeSpacing,
-                                          child: TextFormField(
-                                            style: Theme.of(context).textTheme.bodyLarge,
-                                            onChanged:
-                                                (String str) =>
-                                                    Injector.instance<CoinBloc>().add(CoinEvent.search(phrase: str)),
-                                            decoration: InputDecoration(
-                                              suffixIconConstraints: const BoxConstraints(
-                                                maxHeight: PrimaryConstants.kDefaultSpacing,
-                                              ),
-
-                                              hintText: S.of(context).search,
-                                              contentPadding: const EdgeInsets.all(PrimaryConstants.kContentPadding),
+                                      child: SizedBox(
+                                        height: PrimaryConstants.kLargeSpacing,
+                                        child: TextFormField(
+                                          style: Theme.of(context).textTheme.bodyLarge,
+                                          onChanged:
+                                              (String str) =>
+                                                  Injector.instance<CoinBloc>().add(CoinEvent.search(phrase: str)),
+                                          decoration: InputDecoration(
+                                            suffixIconConstraints: const BoxConstraints(
+                                              maxHeight: PrimaryConstants.kDefaultSpacing,
                                             ),
-                                            controller: _controller,
-                                            focusNode: _focusNode,
+                                            hintText: S.of(context).search,
+                                            contentPadding: const EdgeInsets.all(PrimaryConstants.kContentPadding),
                                           ),
+                                          controller: _controller,
+                                          focusNode: _focusNode,
                                         ),
                                       ),
                                     ),
@@ -109,7 +99,7 @@ class _CoinState extends State<MainScreen> {
                       if (state.coinsData.isEmpty) return const EmptyScreen();
                       return RefreshIndicator(
                         onRefresh: () async {
-                          Injector.instance<CoinBloc>().add(const CoinEvent.init());
+                          Injector.instance<CoinBloc>().add(const CoinEvent.refresh());
                         },
                         child: ListView.builder(
                           itemCount: state.coinsData.length,

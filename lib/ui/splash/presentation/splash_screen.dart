@@ -18,7 +18,7 @@ class SplashScreen extends StatelessWidget {
             context.go(AppRouter.mainPath);
           }
         },
-        child: Scaffold(body: Center(child: Assets.images.logo.image())),
+        child: Scaffold(body: Center(child: Assets.images.logo.image(color: Theme.of(context).colorScheme.onSurface))),
       ),
     );
   }

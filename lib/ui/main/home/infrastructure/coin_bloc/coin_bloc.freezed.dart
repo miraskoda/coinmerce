@@ -173,6 +173,38 @@ String toString() {
 
 
 /// @nodoc
+
+
+class _Refresh implements CoinEvent {
+  const _Refresh();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Refresh);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'CoinEvent.refresh()';
+}
+
+
+}
+
+
+
+
+/// @nodoc
 mixin _$CoinState {
 
  bool get isLoading; bool get isError; List<Coin> get coinsData;

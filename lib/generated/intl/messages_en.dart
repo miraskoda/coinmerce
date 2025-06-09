@@ -26,6 +26,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "appBarTitle": MessageLookupByLibrary.simpleMessage("Coinmerce"),
     "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
     "description": MessageLookupByLibrary.simpleMessage("Description"),
+    "description_text": MessageLookupByLibrary.simpleMessage(
+      "Coinmerce is your trusted companion in the world of cryptocurrency. We provide real-time market data, price tracking, and portfolio management tools to help you make informed investment decisions. Our user-friendly interface makes it easy to monitor your favorite cryptocurrencies and stay updated with market trends. Whether you\'re a seasoned trader or just starting your crypto journey, Coinmerce is here to support your financial goals.",
+    ),
     "emptyResult": MessageLookupByLibrary.simpleMessage("No results found"),
     "error": MessageLookupByLibrary.simpleMessage("An error occurred"),
     "language": MessageLookupByLibrary.simpleMessage("Language"),

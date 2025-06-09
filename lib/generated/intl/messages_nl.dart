@@ -26,6 +26,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "appBarTitle": MessageLookupByLibrary.simpleMessage("Coinmerce"),
     "darkMode": MessageLookupByLibrary.simpleMessage("Donkere modus"),
     "description": MessageLookupByLibrary.simpleMessage("Beschrijving"),
+    "description_text": MessageLookupByLibrary.simpleMessage(
+      "Coinmerce is uw vertrouwde metgezel in de wereld van cryptocurrency. Wij bieden real-time marktdata, prijsvolging en portfoliobeheer tools om u te helpen weloverwogen investeringsbeslissingen te nemen. Onze gebruiksvriendelijke interface maakt het gemakkelijk om uw favoriete cryptocurrencies te volgen en op de hoogte te blijven van markttrends. Of u nu een ervaren handelaar bent of net begint met uw crypto-reis, Coinmerce staat klaar om uw financiële doelen te ondersteunen.",
+    ),
     "emptyResult": MessageLookupByLibrary.simpleMessage(
       "Geen resultaten gevonden",
     ),

@@ -26,6 +26,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "appBarTitle": MessageLookupByLibrary.simpleMessage("Coinmerce"),
     "darkMode": MessageLookupByLibrary.simpleMessage("Tmavý režim"),
     "description": MessageLookupByLibrary.simpleMessage("Popis"),
+    "description_text": MessageLookupByLibrary.simpleMessage(
+      "Coinmerce je váš důvěryhodný společník ve světě kryptoměn. Poskytujeme data o trhu v reálném čase, sledování cen a nástroje pro správu portfolia, které vám pomohou činit informovaná investiční rozhodnutí. Naše uživatelsky přívětivé rozhraní usnadňuje sledování vašich oblíbených kryptoměn a udržování přehledu o tržních trendech. Ať už jste zkušený obchodník nebo teprve začínáte s kryptoměnami, Coinmerce je tu pro podporu vašich finančních cílů.",
+    ),
     "emptyResult": MessageLookupByLibrary.simpleMessage(
       "Nebyly nalezeny žádné výsledky",
     ),

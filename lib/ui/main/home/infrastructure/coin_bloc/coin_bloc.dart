@@ -12,6 +12,7 @@ part 'coin_state.dart';
 class CoinBloc extends Bloc<CoinEvent, CoinState> {
   CoinBloc({required this.apiRepository}) : super(CoinState.init()) {
     on<_Init>(_init);
+    on<_Refresh>(_refresh);
   }
 
   final ApiRepository apiRepository;
@@ -26,6 +27,18 @@ class CoinBloc extends Bloc<CoinEvent, CoinState> {
       },
       (r) {
         emit(state.copyWith(isLoading: false, coinsData: r.data!, isError: false));
+      },
+    );
+  }
+
+  Future<void> _refresh(_Refresh e, Emitter<CoinState> emit) async {
+    final response = await apiRepository.fetchCoins();
+    response.fold(
+      (l) {
+        emit(state.copyWith(isError: true));
+      },
+      (r) {
+        emit(state.copyWith(coinsData: r.data!, isError: false));
       },
     );
   }

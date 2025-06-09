@@ -40,5 +40,5 @@ class PrimaryConstants {
   // Image real estate size
 
   /// 80 px space
-  static const kRealEstateImageSize = 80.0;
+  static const kHugeImageSize = 80.0;
 }

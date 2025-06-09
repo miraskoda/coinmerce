@@ -133,6 +133,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Coinmerce is your trusted companion in the world of cryptocurrency. We provide real-time market data, price tracking, and portfolio management tools to help you make informed investment decisions. Our user-friendly interface makes it easy to monitor your favorite cryptocurrencies and stay updated with market trends. Whether you're a seasoned trader or just starting your crypto journey, Coinmerce is here to support your financial goals.`
+  String get description_text {
+    return Intl.message(
+      'Coinmerce is your trusted companion in the world of cryptocurrency. We provide real-time market data, price tracking, and portfolio management tools to help you make informed investment decisions. Our user-friendly interface makes it easy to monitor your favorite cryptocurrencies and stay updated with market trends. Whether you\'re a seasoned trader or just starting your crypto journey, Coinmerce is here to support your financial goals.',
+      name: 'description_text',
+      desc: 'The main description text shown in the about section',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

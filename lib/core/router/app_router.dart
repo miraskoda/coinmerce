@@ -2,6 +2,7 @@ import 'package:coinmerce/api/model/coin.dart';
 import 'package:coinmerce/core/app_bloc/app_bloc.dart';
 import 'package:coinmerce/ui/detail/detail_screen.dart';
 import 'package:coinmerce/ui/main/home/presentation/main_screen.dart';
+import 'package:coinmerce/ui/main/info/info_screen.dart';
 import 'package:coinmerce/ui/main/nested_navigation.dart';
 import 'package:coinmerce/ui/splash/presentation/splash_screen.dart';
 import 'package:flutter/foundation.dart';
@@ -65,8 +66,8 @@ class AppRouter {
           ),
           StatefulShellBranch(
             navigatorKey: _infoKey,
-            routes: const [
-              // GoRoute(path: infoPath, pageBuilder: (context, state) => const NoTransitionPage(child: InfoScreen())),
+            routes: [
+              GoRoute(path: infoPath, pageBuilder: (context, state) => const NoTransitionPage(child: InfoScreen())),
             ],
           ),
         ],

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:coinmerce/app.dart';
 import 'package:coinmerce/core/injector/injector.dart';
+import 'package:coinmerce/core/services/crash_service/crash_service.dart';
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 
@@ -20,7 +21,7 @@ Future<void> main() async {
       runApp(const App());
     },
     (error, stack) {
-      // TO-DO: handle error to crash service
+      Injector.instance<CrashService>().recordException(error, stack);
     },
   );
 }

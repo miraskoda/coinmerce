@@ -1,7 +1,7 @@
 import 'package:coinmerce/api/model/coin.dart';
-import 'package:coinmerce/core/app_extensions.dart';
+import 'package:coinmerce/core/extensions/app_extensions.dart';
+import 'package:coinmerce/core/extensions/dollar_extension.dart';
 import 'package:coinmerce/core/router/app_router.dart';
-import 'package:coinmerce/ui/others/build_icon_with_text.dart';
 import 'package:coinmerce/ui/others/primary_constants.dart';
 import 'package:coinmerce/ui/others/primary_padding.dart';
 import 'package:coinmerce/ui/others/primary_spacing.dart';
@@ -18,10 +18,10 @@ class CoinItem extends StatelessWidget {
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(PrimaryConstants.kNormalBorderRadius)),
         child: InkWell(
-          onTap: () => context.push(AppRouter.detailPath, extra: Coin),
+          onTap: () => context.push(AppRouter.detailPath, extra: coin),
           child: PrimaryPadding.md(
             child: SizedBox(
-              height: PrimaryConstants.kRealEstateImageSize,
+              height: PrimaryConstants.kHugeImageSize,
               child: Row(
                 children: [
                   ClipRRect(
@@ -30,12 +30,12 @@ class CoinItem extends StatelessWidget {
                       tag: coin.id,
                       child: Image.network(
                         coin.image.asCoinImage(),
-                        width: PrimaryConstants.kRealEstateImageSize,
-                        height: PrimaryConstants.kRealEstateImageSize,
+                        width: PrimaryConstants.kHugeImageSize,
+                        height: PrimaryConstants.kHugeImageSize,
                         fit: BoxFit.cover,
                         errorBuilder:
                             (_, __, ___) =>
-                                const Icon(Icons.image_not_supported, size: PrimaryConstants.kRealEstateImageSize),
+                                const Icon(Icons.image_not_supported, size: PrimaryConstants.kHugeImageSize),
                       ),
                     ),
                   ),
@@ -46,27 +46,9 @@ class CoinItem extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('123', style: Theme.of(context).textTheme.displaySmall),
+                          Text(coin.currentPrice.toDollar(), style: Theme.of(context).textTheme.displaySmall),
                           const PrimarySpacing.gapXxs(),
-                          Text('${coin.id} - ${coin.id}', style: Theme.of(context).textTheme.bodyMedium),
-                          const Spacer(),
-                          Wrap(
-                            spacing: PrimaryConstants.kSmallSpacing,
-                            children: [
-                              BuildIconWithText(
-                                icon: const Icon(Icons.bed, size: PrimaryConstants.kDefaultSpacing),
-                                text: coin.id,
-                              ),
-                              BuildIconWithText(
-                                icon: const Icon(Icons.shower, size: PrimaryConstants.kDefaultSpacing),
-                                text: coin.id,
-                              ),
-                              BuildIconWithText(
-                                icon: const Icon(Icons.square_foot, size: PrimaryConstants.kDefaultSpacing),
-                                text: '${coin.id} m²',
-                              ),
-                            ],
-                          ),
+                          Text('${coin.name} - ${coin.id}', style: Theme.of(context).textTheme.bodyMedium),
                         ],
                       ),
                     ),
