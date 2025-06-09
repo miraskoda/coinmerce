@@ -7,7 +7,7 @@ class PrimaryAppbar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(title: Text(S.of(context).appBarTitle, style: Theme.of(context).textTheme.displaySmall));
+    return AppBar(title: Text(S.of(context).appBarTitle, style: Theme.of(context).textTheme.headlineMedium));
   }
 
   @override

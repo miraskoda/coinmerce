@@ -67,10 +67,24 @@ class _CoinState extends State<MainScreen> {
                                     onChanged:
                                         (String str) => context.read<CoinBloc>().add(CoinEvent.search(phrase: str)),
                                     decoration: InputDecoration(
-                                      suffixIconConstraints: const BoxConstraints(
-                                        maxHeight: PrimaryConstants.kDefaultSpacing,
-                                      ),
+                                      filled: true,
+                                      fillColor: Theme.of(context).colorScheme.surfaceContainerHighest,
                                       hintText: S.of(context).search,
+                                      prefixIcon: const Icon(Icons.search),
+                                      suffixIcon:
+                                          _controller.text.isNotEmpty
+                                              ? IconButton(
+                                                icon: const Icon(Icons.clear),
+                                                onPressed: () {
+                                                  _controller.clear();
+                                                  context.read<CoinBloc>().add(const CoinEvent.search(phrase: ''));
+                                                },
+                                              )
+                                              : null,
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(PrimaryConstants.kContentPadding),
+                                        borderSide: BorderSide.none,
+                                      ),
                                       contentPadding: const EdgeInsets.all(PrimaryConstants.kContentPadding),
                                     ),
                                     controller: _controller,
@@ -89,6 +103,9 @@ class _CoinState extends State<MainScreen> {
                         CoinState(isLoading: true) => const Center(child: CircularProgressIndicator()),
                         CoinState(isError: true) => ErrorScreen(
                           '${S.of(context).error} \n\n Tap here to reload again!',
+                          onRetry: () {
+                            context.read<CoinBloc>().add(const CoinEvent.init());
+                          },
                         ),
                         CoinState(coinsData: []) => const EmptyScreen(),
                         _ => RefreshIndicator(
@@ -97,10 +114,17 @@ class _CoinState extends State<MainScreen> {
                             context.read<CoinBloc>().add(const CoinEvent.refresh());
                           },
                           child: ListView.builder(
+                            padding: const EdgeInsets.symmetric(vertical: PrimaryConstants.kDefaultSpacing),
                             itemCount: state.coinsData.length,
                             itemBuilder: (_, index) {
                               final coin = state.coinsData[index];
-                              return CoinItem(coin);
+                              return Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: PrimaryConstants.kDefaultSpacing,
+                                  vertical: PrimaryConstants.kXSmallSpacing,
+                                ),
+                                child: CoinItem(coin),
+                              );
                             },
                           ),
                         ),
