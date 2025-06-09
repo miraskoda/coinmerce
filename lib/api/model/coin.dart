@@ -1,3 +1,4 @@
+import 'package:coinmerce/api/model/roi.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'coin.g.dart';
@@ -6,31 +7,60 @@ part 'coin.g.dart';
 class Coin {
   Coin({
     required this.id,
+    required this.symbol,
+    required this.name,
     required this.image,
-    required this.price,
-    required this.bedrooms,
-    required this.bathrooms,
-    required this.size,
-    required this.description,
-    required this.zip,
-    required this.city,
-    required this.latitude,
-    required this.longitude,
-    required this.createdDate,
+    required this.currentPrice,
+    required this.marketCap,
+    required this.marketCapRank,
+    required this.fullyDilutedValuation,
+    required this.totalVolume,
+    required this.high24h,
+    required this.low24h,
+    required this.priceChange24h,
+    required this.priceChangePercentage24h,
+    required this.marketCapChange24h,
+    required this.marketCapChangePercentage24h,
+    required this.circulatingSupply,
+    required this.totalSupply,
+    required this.maxSupply,
+    required this.ath,
+    required this.athChangePercentage,
+    required this.athDate,
+    required this.atl,
+    required this.atlChangePercentage,
+    required this.atlDate,
+    required this.roi,
+    required this.lastUpdated,
   });
 
   factory Coin.fromJson(Map<String, dynamic> json) => _$CoinFromJson(json);
-  final int id;
+
+  final String id;
+  final String symbol;
+  final String name;
   final String image;
-  final int price;
-  final int bedrooms;
-  final int bathrooms;
-  final int size;
-  final String description;
-  final String zip;
-  final String city;
-  final double latitude;
-  final double longitude;
-  final DateTime createdDate;
+  final double currentPrice;
+  final int marketCap;
+  final int marketCapRank;
+  final int? fullyDilutedValuation;
+  final int totalVolume;
+  final double high24h;
+  final double low24h;
+  final double priceChange24h;
+  final double priceChangePercentage24h;
+  final int marketCapChange24h;
+  final double marketCapChangePercentage24h;
+  final double circulatingSupply;
+  final double? totalSupply;
+  final double? maxSupply;
+  final double ath;
+  final double athChangePercentage;
+  final DateTime athDate;
+  final double atl;
+  final double atlChangePercentage;
+  final DateTime atlDate;
+  final Roi? roi;
+  final DateTime lastUpdated;
   Map<String, dynamic> toJson() => _$CoinToJson(this);
 }
