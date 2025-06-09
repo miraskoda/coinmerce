@@ -1,16 +1,30 @@
-# coinmerce
+# Coinmerce Crypto Prices App
 
-A new Flutter project.
+A Simple Flutter application that displays the top 10 cryptocurrencies by market capitalization using the CoinGecko API.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- List of top 10 cryptocurrencies
+- Displays:
+  - Name
+  - Symbol
+  - Current price (USD)
+  - 24-hour price change percentage
+- Pull-to-refresh functionality
+- Clean and modular code structure
+- Search functionality
+- Simple price chart for each cryptocurrency
+- Dark mode toggle
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter**
+- **State Management**: flutter_bloc
+- **HTTP package**: Retrofit & Dio
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## API
+
+Using the [CoinGecko API](https://www.coingecko.com/en/api):
+
+```url
+https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false
