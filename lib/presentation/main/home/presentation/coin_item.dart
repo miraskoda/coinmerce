@@ -45,7 +45,11 @@ class CoinItem extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(coin.currentPrice.toDollar(), style: Theme.of(context).textTheme.displaySmall),
+                          Text(
+                            coin.currentPrice.toDollar(),
+                            overflow: TextOverflow.ellipsis,
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
                           const PrimarySpacing.gapXxs(),
                           Text('${coin.name} - ${coin.id}', style: Theme.of(context).textTheme.bodyMedium),
                         ],
